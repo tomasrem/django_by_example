@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$u6aanc+mj5#=i9pnw4^x*zqx^06pah5xt7=3q&l#m56hh7-ja'
+SECRET_KEY = 'django-insecure-k!q$_!-3^82957cap7+15+3bo25ps51=1%l#4k^1+!vzerxnkm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig', # django looks for authentification templates in django.contrib.admin  but placing our app before it we ensore that we will overwrite them 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,3 +122,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#LOGIN
+LOGIN_REDIRECT_URL = 'dashboard' #tells django where to redirect after login is no next parameter in request
+LOGIN_URL = 'login' #url to redirect the users to login (eg. if you click on decorated view)
+LOGOUT_URL = 'logout' #url to logout user
+
+#email 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

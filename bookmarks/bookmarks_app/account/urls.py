@@ -26,6 +26,9 @@ urlpatterns = [
     #all the views above are located in this urls.py file 
     path('' , include('django.contrib.auth.urls')),
 
+    path('register/' , views.register , name = 'register') ,
+    path('edit/' , views.edit , name = 'edit'), 
+
     path('' , views.dashboard , name='dashboard'),
     
 ]

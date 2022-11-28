@@ -104,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'sk-SK'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "Europe/Bratislava"
 
 USE_I18N = True
 
@@ -124,9 +124,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #LOGIN
-LOGIN_REDIRECT_URL = 'dashboard' #tells django where to redirect after login is no next parameter in request
+LOGIN_REDIRECT_URL = 'dashboard' #tells django where to redirect after login 
 LOGIN_URL = 'login' #url to redirect the users to login (eg. if you click on decorated view)
 LOGOUT_URL = 'logout' #url to logout user
 
 #email 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#Media 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'

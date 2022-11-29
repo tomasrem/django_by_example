@@ -134,3 +134,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #Media 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# django will try to log user in using each backend until it success or returns none
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend' , 
+    'account.authentication.EmailAuthBackend' , # our custom backend
+]

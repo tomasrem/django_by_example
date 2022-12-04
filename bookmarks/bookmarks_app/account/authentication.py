@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.backends import BaseBackend
+from account.models import Profile
 
 # custom django authentication backend 
 class EmailAuthBackend(BaseBackend):
@@ -25,3 +26,11 @@ class EmailAuthBackend(BaseBackend):
 
 
     # custom auth backed has to have only those two class methods and work as above.
+
+def create_profile(backend , user , *args , **kwargs):
+
+    """
+    Create user profile for social authentication
+    
+    """
+    Profile.objects.get_or_create(user=user)

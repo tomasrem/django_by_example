@@ -141,4 +141,21 @@ MEDIA_ROOT = BASE_DIR / 'media'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend' , 
     'account.authentication.EmailAuthBackend' , # our custom backend
+    'social_core.backends.facebook.FacebookOAuth2' ,  #facebook login backend
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
 ]
+
+# info from developers.facebook.com/apps/basics
+SOCIAL_AUTH_FACEBOOK_KEY = '533235015345304'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'dbf1923d050778a4e53227885dedef46'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+
+# twitter secret api keys 
+SOCIAL_AUTH_TWITTER_KEY = '4XQWGZQ7CNaS7ZpwRDetimOie'
+SOCIAL_AUTH_TWITTER_SECRET = 'YiHtzhFee4K5UciEv0UvsBTFGyz8GkDvSfsy793SjdqYMVZZAx'
+
+# google secret user id keys 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '920782916586-tvpvafbvt1elauhk06u8e1c2p52nps45.apps.googleusercontent.com' # google client id
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' #google client secret key

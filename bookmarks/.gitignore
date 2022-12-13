@@ -1,2 +1,4 @@
 b_env
 db.sqlite3
+cert.crt
+cert.key

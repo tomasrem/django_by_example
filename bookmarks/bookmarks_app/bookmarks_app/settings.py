@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django' , 
     'django_extensions' , 
+    'images.apps.ImagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -161,6 +162,8 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '920782916586-tvpvafbvt1elauhk06u8e1c2p52nps45.a
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' #google client secret key
 
 
+
+#  https://python-social-auth.readthedocs.io/en/latest/pipeline.html
 # creating a profile for user that registeres via the social auth 
 SOCIAL_AUTH_PIPELINE = [
     # Get the information we can about the user and return it in a simple

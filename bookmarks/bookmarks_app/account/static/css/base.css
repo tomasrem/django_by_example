@@ -175,6 +175,7 @@ ul.messages li a.close {
 /* social-auth */
 .social {
     float:right;
+    
 }
 .social li {
     list-style:none;
